@@ -13,7 +13,7 @@ function WeatherCard({ city, temperature, conditions, warning }) {
         }
     };
 
-    const warningBox = warning && (
+    const warningBox = warning && ( 
         <div style={{ backgroundColor: 'red', color: 'white', padding: '10px', marginTop: '10px' }}>
             <strong>⚠️ OSTRZEŻENIE:</strong> {warning}
         </div>
@@ -25,7 +25,7 @@ function WeatherCard({ city, temperature, conditions, warning }) {
           <div className="weather-info">
               {getWeatherIcon()} {city}, {temperature}°C
           </div>
-          {warning && warningBox}
+          {warning && warningBox} 
       </div>
   )
 }

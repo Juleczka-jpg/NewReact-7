@@ -6,20 +6,24 @@ function UserProfile({ name, email, bio, website, isPremium, followerCount}) {
 
             <h2>
                 {name}
-                {isPremium && (
+                {/*operator koniunkcji*/}
+                {isPremium && ( 
                     <span style={{ marginLeft: '10px', color: 'gold' }}>⭐ Premium</span>
                 )}
             </h2>
             
             <p>Email: {email}</p>
 
+            {/*operator koniunkcji*/}
             {bio && <p>Bio: {bio}</p>}
 
-            {website && (
+            {/*operator koniunkcji*/}
+            {website && 
                 <p>Website: <a href={website} target="_blank">{website}</a></p>
-            )}
+            }
 
-            <p>Followers: {followerCount > 999 ? '999+' : followerCount}</p>
+            {/*ternary*/}
+            <p>Followers: {followerCount > 999 ? '999+' : followerCount}</p> 
         </div>
     );
 }
